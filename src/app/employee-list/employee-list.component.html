@@ -1,0 +1,47 @@
+<h2> Employee List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Id</th>
+            <th> Name</th>
+            <th> Age </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr *ngFor = "let e of myArr" >
+            
+            <td> {{ e.Id}} </td>
+            <td> {{ e.Name }} </td>
+            <td> {{ e.Age}} </td>
+            <td>
+                <button (click) = "updateEmployee(employee.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteEmployee(employee.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "employeeDetails(employee.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+      
+        </tr>
+
+
+      <!-- <div *ngFor="let employee of employees | keyvalue">
+            <div *ngFor="let d of employees.value | keyvalue">
+
+                    <td> {{ employee.d.results.Id }} </td>
+                    <td> {{ employee.d.results.Name }} </td>
+                    <td> {{ employee.d.results.Age }} </td>
+                    <td>
+                        <button (click) = "updateEmployee(employee.id)" class = "btn btn-info"> Update</button>
+                        <button (click) = "deleteEmployee(employee.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                        <button (click) = "employeeDetails(employee.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+                    </td>
+                </div>
+
+        </div>-->
+
+
+
+
+
+    </tbody>
+</table>
